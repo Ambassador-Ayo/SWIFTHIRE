@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employers Page</title>
+    <link rel="stylesheet" href="adminemployer.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>EMPLOYERS</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employer ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    // Fetch and display employer data from the database using PHP
+                    // Replace this with your actual database query and PHP code
+                    // Example data:
+                    $employers = [
+                        ["E001", "John", "Doe", "john@example.com"],
+                        ["E002", "Jane", "Smith", "jane@example.com"],
+                        // Add more rows as needed
+                    ];
+
+                    foreach ($employers as $employer) {
+                        echo "<tr>";
+                        echo "<td>{$employer[0]}</td>";
+                        echo "<td>{$employer[1]}</td>";
+                        echo "<td>{$employer[2]}</td>";
+                        echo "<td>{$employer[3]}</td>";
+                        echo '<td>
+                                <button class="approve-button">Approve</button>
+                                <button class="disapprove-button">Disapprove</button>
+                              </td>';
+                        echo "</tr>";
+                    }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

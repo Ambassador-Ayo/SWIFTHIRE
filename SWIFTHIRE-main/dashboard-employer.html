@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <!-- Include your CSS styles here -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome, John</h1>
+            <div class="user-info">
+                <?php
+                // Fetch the profile image URL and employer ID from the database
+                $profileImageURL = fetchProfileImageFromDatabase(); // Replace with your database query
+                $employerID = fetchEmployerIDFromDatabase(); // Replace with your database query
+                ?>
+                <img src="<?php echo $profileImageURL; ?>" alt="Profile Image">
+                <p><strong>Employer ID:</strong> 12345</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="employer-profile.html" class="btn">Personal Information Form</a>
+            <a href="employer-workspec.html" class="btn">Job Application Form</a>
+            <a href="login.html" class="btn btn-danger">Log Out</a>
+        </div>
+
+        <h2>Matching Employees</h2>
+        <table class="employee-table">
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Job</th>
+                    <th>Remuneration period</th>
+                    <th>Remuneration amount</th>
+                    <th>phone number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through and display matching employees' information -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>Cleaner</td>
+                    <td>Monthly</td>
+                    <td>$1000/month</td>
+                    <td>123456789</td>
+                </tr>
+                <!-- Add more rows for other employees as needed -->
+            </tbody>
+        </table>
+
+        <div class="notification">
+            <p><strong>Notification:</strong> Your application status is pending.</p>
+        </div>
+    </div>
+</body>
+</html>

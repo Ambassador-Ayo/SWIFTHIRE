@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="dashboard1.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <?php
+                // Fetch and display user's first name and employee ID
+                $firstName = "John"; // Replace with data fetched from the database
+                $employeeID = "E12345"; // Replace with data fetched from the database
+            ?>
+            <h1>Welcome, Doe</h1>
+            <div class="user-info">
+                <img src="profile_image.jpg" alt="Profile Image"> <!-- Replace with dynamic image URL -->
+                <p><strong>Employee ID:</strong> 12345</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="employee-profile.html" class="btn">Personal Information Form</a>
+            <a href="employee-workspec.html" class="btn">Job Application Form</a>
+            <a href="login.html" class="btn btn-danger">Log Out</a>
+        </div>
+
+        <h2>Available Jobs</h2>
+        <div class="dropdown">
+            <label for="jobSelection">check the menu below for the list of job openings :</label>
+            <select id="jobSelection">
+                <option value=""></option>
+                <option value="cleaner">Cleaner</option>
+                <option value="driver">Driver</option>
+                <option value="chef">Chef</option>
+                <option value="security_personnel">Security Personnel</option>
+                <option value="gardener">Gardener</option>
+                <option value="nanny">Nanny</option>
+            </select>
+        </div>
+
+        
+        <div class="notification">
+            <p><strong>Notification:</strong> Your application status is pending.</p>
+        </div>
+    </div>
+</body>
+</html>

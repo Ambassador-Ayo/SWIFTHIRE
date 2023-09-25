@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Job Application Form</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="employer_id">Employer ID:</label>
+                <!-- Fetch and display the employer ID from the database here -->
+                <?php
+                    // Assuming you have a PHP variable $employeeId containing the fetched employee ID
+                    $employeeId = "12345"; // Replace with actual value fetched from the database
+                ?>
+                <input type="text" class="form-control" id="employer_id" name="employer_id" value="12345" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="job">Job:</label>
+                <select class="form-control" id="job" name="job" required>
+                    <option value=""></option>
+                    <option value="cleaner">Cleaner</option>
+                    <option value="driver">Driver</option>
+                    <option value="chef">Chef</option>
+                    <option value="security_personnel">Security Personnel</option>
+                    <option value="gardener">Gardener</option>
+                    <option value="nanny">Nanny</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="renumeration_period">Remuneration Period:</label>
+                <select class="form-control" id="renumeration_period" name="renumeration_period" required>
+                    <option value=""></option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="renumeration_amount">Remuneration Amount:</label>
+                <input type="text" class="form-control" id="renumeration_amount" name="renumeration_amount" placeholder="Remuneration Amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="accommodation">Accommodation Provision:</label>
+                <select class="form-control" id="accommodation" name="accommodation" required>
+                    <option value=""></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <!-- Display 'Pending' as a placeholder -->
+                <input type="text" class="form-control" id="status" name="status" value="Pending" readonly>
+            </div>
+            
+            <button type="submit" name="employer_work_spec" class="btn btn-primary">Submit</button>
+            
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
